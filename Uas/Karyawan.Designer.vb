@@ -47,6 +47,9 @@ Partial Class Karyawan
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.KaryawanTab = New System.Windows.Forms.TabPage()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.inpSearch = New System.Windows.Forms.TextBox()
         Me.LaporanTab = New System.Windows.Forms.TabPage()
         Me.logoutTab = New System.Windows.Forms.TabPage()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -116,9 +119,9 @@ Partial Class Karyawan
         Me.dataGrid.AllowUserToResizeColumns = False
         Me.dataGrid.AllowUserToResizeRows = False
         Me.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataGrid.Location = New System.Drawing.Point(430, 120)
+        Me.dataGrid.Location = New System.Drawing.Point(430, 156)
         Me.dataGrid.Name = "dataGrid"
-        Me.dataGrid.Size = New System.Drawing.Size(553, 313)
+        Me.dataGrid.Size = New System.Drawing.Size(553, 277)
         Me.dataGrid.TabIndex = 6
         '
         'Panel1
@@ -292,6 +295,9 @@ Partial Class Karyawan
         '
         'KaryawanTab
         '
+        Me.KaryawanTab.Controls.Add(Me.Label11)
+        Me.KaryawanTab.Controls.Add(Me.Button5)
+        Me.KaryawanTab.Controls.Add(Me.inpSearch)
         Me.KaryawanTab.Controls.Add(Me.Panel1)
         Me.KaryawanTab.Controls.Add(Me.dataGrid)
         Me.KaryawanTab.Controls.Add(Me.GroupBox1)
@@ -302,6 +308,31 @@ Partial Class Karyawan
         Me.KaryawanTab.TabIndex = 0
         Me.KaryawanTab.Text = "Karyawan"
         Me.KaryawanTab.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(688, 130)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(41, 13)
+        Me.Label11.TabIndex = 24
+        Me.Label11.Text = "Search"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(908, 123)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 23
+        Me.Button5.Text = "Cari"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'inpSearch
+        '
+        Me.inpSearch.Location = New System.Drawing.Point(735, 126)
+        Me.inpSearch.Name = "inpSearch"
+        Me.inpSearch.Size = New System.Drawing.Size(167, 20)
+        Me.inpSearch.TabIndex = 22
         '
         'LaporanTab
         '
@@ -382,6 +413,7 @@ Partial Class Karyawan
         Me.GroupBox1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.KaryawanTab.ResumeLayout(False)
+        Me.KaryawanTab.PerformLayout()
         Me.logoutTab.ResumeLayout(False)
         Me.logoutTab.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -419,4 +451,7 @@ Partial Class Karyawan
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents inpSearch As System.Windows.Forms.TextBox
 End Class

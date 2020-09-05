@@ -31,8 +31,9 @@ Partial Class HomeScreen
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.absenNip = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.statusLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -124,12 +125,13 @@ Partial Class HomeScreen
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Lakukan pengisian absen dengan memasukan NIP"
         '
-        'TextBox3
+        'absenNip
         '
-        Me.TextBox3.Location = New System.Drawing.Point(361, 282)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(215, 20)
-        Me.TextBox3.TabIndex = 3
+        Me.absenNip.Location = New System.Drawing.Point(361, 282)
+        Me.absenNip.Name = "absenNip"
+        Me.absenNip.Size = New System.Drawing.Size(215, 20)
+        Me.absenNip.TabIndex = 3
+        Me.absenNip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Button2
         '
@@ -140,13 +142,23 @@ Partial Class HomeScreen
         Me.Button2.Text = "Absen "
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'statusLabel
+        '
+        Me.statusLabel.AutoSize = True
+        Me.statusLabel.Location = New System.Drawing.Point(14, 114)
+        Me.statusLabel.Name = "statusLabel"
+        Me.statusLabel.Size = New System.Drawing.Size(37, 13)
+        Me.statusLabel.TabIndex = 5
+        Me.statusLabel.Text = "Status"
+        '
         'HomeScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(882, 492)
+        Me.Controls.Add(Me.statusLabel)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.absenNip)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)
@@ -165,9 +177,10 @@ Partial Class HomeScreen
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents absenNip As System.Windows.Forms.TextBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents inpUsername As System.Windows.Forms.TextBox
     Friend WithEvents inpPassword As System.Windows.Forms.TextBox
+    Friend WithEvents statusLabel As System.Windows.Forms.Label
 
 End Class

@@ -3,9 +3,15 @@
 Public Class Karyawan
 
     'untuk menampilkan data karyawan
-    Public Sub showKaryawan()
+    Public Sub showKaryawan(Optional ByVal keyword As String = "")
 
-        dataAdapter = New OleDbDataAdapter("SELECT * FROM karyawan", connect)
+        'jika keyword tidak kosong
+        If keyword <> "" Then
+            dataAdapter = New OleDbDataAdapter("SELECT * FROM karyawan WHERE nip LIKE '%" + keyword + "%' OR nama LIKE '%" + keyword + "%' OR jenis_kelamin LIKE '%" + keyword + "%' OR kategori LIKE '%" + keyword + "%' OR no_hp LIKE '%" + keyword + "%' ", connect)
+        Else
+            dataAdapter = New OleDbDataAdapter("SELECT * FROM karyawan", connect)
+        End If
+
         dataSet = New DataSet
         dataAdapter.Fill(dataSet, "karyawan")
         dataGrid.DataSource = dataSet.Tables("karyawan")
@@ -162,5 +168,61 @@ Public Class Karyawan
     'Jika button update di klik
     Private Sub btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn.Click
 
+        Call connection()
+        Dim jenisKelamin As String
+
+        'cek jenis kelamin yang di klik
+        If inpLaki.Checked Then
+            jenisKelamin = "Laki Laki"
+        Else
+            jenisKelamin = "Perempuan"
+        End If
+
+        command = New OleDbCommand("SELECT * FROM karyawan WHERE nip = '" + inpNip.Text + "' AND nip NOT IN ('" + inpNip.Text + "') ", connect)
+        dataReader = command.ExecuteReader
+
+        'jika nip terdapat duplikat
+        If dataReader.HasRows Then
+            'reset nip jika tersedia
+            MsgBox("NIP sudah tersedia")
+            inpNip.Text = ""
+
+        Else
+            'cek jika sudah memilih data
+            If inpNip.Text <> "" Then
+
+                'proses update data karyawan
+                Call connection()
+                command = New OleDbCommand("UPDATE karyawan SET nama = @nama, jenis_kelamin = @jenis_kelamin, kategori = @kataegori, no_hp = @no_hp WHERE nip=@nip ", connect)
+                command.Parameters.AddWithValue("@nama", inpNama.Text)
+                command.Parameters.AddWithValue("@jenis_kelamin", jenisKelamin)
+                command.Parameters.AddWithValue("@kategori", inpKategori.Text)
+                command.Parameters.AddWithValue("@no_hp", inpNohp.Text)
+                command.Parameters.AddWithValue("@nip", inpNip.Text)
+                command.ExecuteNonQuery()
+
+                MsgBox("Berhasil mengubah data")
+
+                Call showKaryawan()
+
+            Else
+                MsgBox("Pilih data terlebih dahulu ")
+            End If
+
+        End If
+
     End Sub
+
+    'Jika button search di klik
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+
+        Call connection()
+
+        Dim keyword As String
+        keyword = inpSearch.Text
+        Call showKaryawan(keyword)
+
+    End Sub
+
+
 End Class

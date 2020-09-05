@@ -8,3 +8,4 @@ C:\Users\Harlequin\Documents\Kuliah\Pemograman Visual\Uas\Uas\obj\x86\Debug\Uas.
 C:\Users\Harlequin\Documents\Kuliah\Pemograman Visual\Uas\Uas\obj\x86\Debug\Uas.pdb
 C:\Users\Harlequin\Documents\Kuliah\Pemograman Visual\Uas\Uas\obj\x86\Debug\WindowsApplication1.HomeScreen.resources
 C:\Users\Harlequin\Documents\Kuliah\Pemograman Visual\Uas\Uas\obj\x86\Debug\WindowsApplication1.Karyawan.resources
+C:\Users\Harlequin\Documents\Kuliah\Pemograman Visual\Uas\Uas\obj\x86\Debug\Uas.vbprojResolveAssemblyReference.cache
