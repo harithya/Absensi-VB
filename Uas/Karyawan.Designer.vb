@@ -44,6 +44,7 @@ Partial Class Karyawan
         Me.inpNohp = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.KaryawanTab = New System.Windows.Forms.TabPage()
         Me.LaporanTab = New System.Windows.Forms.TabPage()
@@ -109,10 +110,15 @@ Partial Class Karyawan
         '
         'dataGrid
         '
+        Me.dataGrid.AllowUserToAddRows = False
+        Me.dataGrid.AllowUserToDeleteRows = False
+        Me.dataGrid.AllowUserToOrderColumns = True
+        Me.dataGrid.AllowUserToResizeColumns = False
+        Me.dataGrid.AllowUserToResizeRows = False
         Me.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataGrid.Location = New System.Drawing.Point(392, 120)
+        Me.dataGrid.Location = New System.Drawing.Point(430, 120)
         Me.dataGrid.Name = "dataGrid"
-        Me.dataGrid.Size = New System.Drawing.Size(529, 313)
+        Me.dataGrid.Size = New System.Drawing.Size(553, 313)
         Me.dataGrid.TabIndex = 6
         '
         'Panel1
@@ -122,12 +128,12 @@ Partial Class Karyawan
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(7, 13)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(914, 78)
+        Me.Panel1.Size = New System.Drawing.Size(976, 78)
         Me.Panel1.TabIndex = 7
         '
         'btn
         '
-        Me.btn.Location = New System.Drawing.Point(148, 265)
+        Me.btn.Location = New System.Drawing.Point(113, 265)
         Me.btn.Name = "btn"
         Me.btn.Size = New System.Drawing.Size(75, 23)
         Me.btn.TabIndex = 8
@@ -136,7 +142,7 @@ Partial Class Karyawan
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(261, 265)
+        Me.Button2.Location = New System.Drawing.Point(205, 265)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 9
@@ -147,7 +153,7 @@ Partial Class Karyawan
         '
         Me.inpNama.Location = New System.Drawing.Point(110, 72)
         Me.inpNama.Name = "inpNama"
-        Me.inpNama.Size = New System.Drawing.Size(226, 20)
+        Me.inpNama.Size = New System.Drawing.Size(264, 20)
         Me.inpNama.TabIndex = 13
         '
         'Label5
@@ -201,10 +207,11 @@ Partial Class Karyawan
         '
         'inpKategori
         '
+        Me.inpKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.inpKategori.FormattingEnabled = True
         Me.inpKategori.Location = New System.Drawing.Point(110, 163)
         Me.inpKategori.Name = "inpKategori"
-        Me.inpKategori.Size = New System.Drawing.Size(226, 21)
+        Me.inpKategori.Size = New System.Drawing.Size(264, 21)
         Me.inpKategori.TabIndex = 18
         '
         'Label4
@@ -220,14 +227,14 @@ Partial Class Karyawan
         '
         Me.inpNip.Location = New System.Drawing.Point(110, 29)
         Me.inpNip.Name = "inpNip"
-        Me.inpNip.Size = New System.Drawing.Size(226, 20)
+        Me.inpNip.Size = New System.Drawing.Size(264, 20)
         Me.inpNip.TabIndex = 11
         '
         'inpNohp
         '
         Me.inpNohp.Location = New System.Drawing.Point(110, 207)
         Me.inpNohp.Name = "inpNohp"
-        Me.inpNohp.Size = New System.Drawing.Size(226, 20)
+        Me.inpNohp.Size = New System.Drawing.Size(264, 20)
         Me.inpNohp.TabIndex = 20
         '
         'Label8
@@ -241,6 +248,7 @@ Partial Class Karyawan
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button4)
         Me.GroupBox1.Controls.Add(Me.inpNohp)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Label8)
@@ -257,10 +265,19 @@ Partial Class Karyawan
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Location = New System.Drawing.Point(8, 120)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(365, 313)
+        Me.GroupBox1.Size = New System.Drawing.Size(405, 313)
         Me.GroupBox1.TabIndex = 21
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Form Karyawan"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(299, 265)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 21
+        Me.Button4.Text = "Reset"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'TabControl1
         '
@@ -270,7 +287,7 @@ Partial Class Karyawan
         Me.TabControl1.Location = New System.Drawing.Point(0, -2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(939, 483)
+        Me.TabControl1.Size = New System.Drawing.Size(1000, 483)
         Me.TabControl1.TabIndex = 22
         '
         'KaryawanTab
@@ -281,7 +298,7 @@ Partial Class Karyawan
         Me.KaryawanTab.Location = New System.Drawing.Point(4, 22)
         Me.KaryawanTab.Name = "KaryawanTab"
         Me.KaryawanTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.KaryawanTab.Size = New System.Drawing.Size(931, 457)
+        Me.KaryawanTab.Size = New System.Drawing.Size(992, 457)
         Me.KaryawanTab.TabIndex = 0
         Me.KaryawanTab.Text = "Karyawan"
         Me.KaryawanTab.UseVisualStyleBackColor = True
@@ -291,7 +308,7 @@ Partial Class Karyawan
         Me.LaporanTab.Location = New System.Drawing.Point(4, 22)
         Me.LaporanTab.Name = "LaporanTab"
         Me.LaporanTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.LaporanTab.Size = New System.Drawing.Size(931, 457)
+        Me.LaporanTab.Size = New System.Drawing.Size(992, 457)
         Me.LaporanTab.TabIndex = 1
         Me.LaporanTab.Text = "Laporan"
         Me.LaporanTab.UseVisualStyleBackColor = True
@@ -305,7 +322,7 @@ Partial Class Karyawan
         Me.logoutTab.Location = New System.Drawing.Point(4, 22)
         Me.logoutTab.Name = "logoutTab"
         Me.logoutTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.logoutTab.Size = New System.Drawing.Size(931, 457)
+        Me.logoutTab.Size = New System.Drawing.Size(992, 457)
         Me.logoutTab.TabIndex = 2
         Me.logoutTab.Text = "Logout"
         Me.logoutTab.UseVisualStyleBackColor = True
@@ -352,7 +369,7 @@ Partial Class Karyawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(937, 479)
+        Me.ClientSize = New System.Drawing.Size(999, 479)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
@@ -401,4 +418,5 @@ Partial Class Karyawan
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class

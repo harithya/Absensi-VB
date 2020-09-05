@@ -9,7 +9,19 @@ Public Class Karyawan
         dataSet = New DataSet
         dataAdapter.Fill(dataSet, "karyawan")
         dataGrid.DataSource = dataSet.Tables("karyawan")
+        dataGrid.Columns(4).Width = 120
 
+    End Sub
+
+    'untuk mereset form karyawan
+    Public Sub resetForm()
+
+        inpNip.Text = ""
+        inpNama.Text = ""
+        inpLaki.Checked = False
+        inpPerempuan.Checked = False
+        inpKategori.SelectedIndex = -1
+        inpNohp.Text = ""
 
     End Sub
 
@@ -66,7 +78,7 @@ Public Class Karyawan
         Else
             'proses tambah data karyawan
             command = New OleDbCommand("INSERT INTO karyawan (nip, nama, jenis_kelamin, kategori, no_hp) VALUES (@nip, @nama, @jenis_kelamin, @kategori, @no_hp) ", connect)
-            command.Parameters.Add("@nip", OleDbType.Integer).Value = inpNip.Text
+            command.Parameters.Add("@nip", OleDbType.Char).Value = inpNip.Text
             command.Parameters.Add("@nama", OleDbType.Char).Value = inpNama.Text
             command.Parameters.Add("@jenis_kelamin", OleDbType.Char).Value = jenisKelamin
             command.Parameters.Add("@kategori", OleDbType.Char).Value = inpKategori.Text
@@ -75,9 +87,9 @@ Public Class Karyawan
             command.ExecuteNonQuery()
             MsgBox("Berhasil menambahkan data")
             Call showKaryawan()
+            Call resetForm()
 
         End If
-
 
     End Sub
 
@@ -91,4 +103,64 @@ Public Class Karyawan
     End Sub
 
 
+
+    'Jika table cell di klik
+    Private Sub dataGrid_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dataGrid.CellClick
+
+        Dim nip As Double
+        Call connection()
+
+        nip = dataGrid.Rows(e.RowIndex).Cells(0).Value
+
+        command = New OleDbCommand("SELECT * FROM karyawan WHERE nip=@nip ", connect)
+        command.Parameters.AddWithValue("@nip", nip)
+        dataReader = command.ExecuteReader
+        dataReader.Read()
+
+        inpNip.Text = dataReader(0)
+        inpNama.Text = dataReader(1)
+        If inpLaki.Text = dataReader(2) Then
+            inpLaki.Checked = True
+        Else
+            inpPerempuan.Checked = True
+        End If
+        inpKategori.SelectedItem = dataReader(3)
+        inpNohp.Text = dataReader(4)
+
+    End Sub
+
+
+    'jika button reset di klik
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Call resetForm()
+    End Sub
+
+
+    'jika button delete di klik
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+
+        Call connection()
+
+        'jika data belum di pilih
+        If inpNip.Text <> "" Then
+
+            'melakukan fungsi delete
+            command = New OleDbCommand("DELETE FROM karyawan WHERE nip=@nip", connect)
+            command.Parameters.AddWithValue("@nip", inpNip.Text)
+            command.ExecuteNonQuery()
+
+            MsgBox("Berhasil menghapus data")
+            Call resetForm()
+            Call showKaryawan()
+
+        Else
+            MsgBox("Pilih data terlebih dahulu")
+        End If
+
+    End Sub
+
+    'Jika button update di klik
+    Private Sub btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn.Click
+
+    End Sub
 End Class
