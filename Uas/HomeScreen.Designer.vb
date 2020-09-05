@@ -23,6 +23,8 @@ Partial Class HomeScreen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.inpPassword = New System.Windows.Forms.TextBox()
+        Me.inpUsername = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -31,8 +33,6 @@ Partial Class HomeScreen
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.inpUsername = New System.Windows.Forms.TextBox()
-        Me.inpPassword = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,6 +49,21 @@ Partial Class HomeScreen
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(881, 84)
         Me.Panel1.TabIndex = 0
+        '
+        'inpPassword
+        '
+        Me.inpPassword.Location = New System.Drawing.Point(655, 39)
+        Me.inpPassword.Name = "inpPassword"
+        Me.inpPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.inpPassword.Size = New System.Drawing.Size(123, 20)
+        Me.inpPassword.TabIndex = 7
+        '
+        'inpUsername
+        '
+        Me.inpUsername.Location = New System.Drawing.Point(496, 39)
+        Me.inpUsername.Name = "inpUsername"
+        Me.inpUsername.Size = New System.Drawing.Size(123, 20)
+        Me.inpUsername.TabIndex = 6
         '
         'Label3
         '
@@ -125,22 +140,7 @@ Partial Class HomeScreen
         Me.Button2.Text = "Absen "
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'inpUsername
-        '
-        Me.inpUsername.Location = New System.Drawing.Point(496, 39)
-        Me.inpUsername.Name = "inpUsername"
-        Me.inpUsername.Size = New System.Drawing.Size(123, 20)
-        Me.inpUsername.TabIndex = 6
-        '
-        'inpPassword
-        '
-        Me.inpPassword.Location = New System.Drawing.Point(655, 39)
-        Me.inpPassword.Name = "inpPassword"
-        Me.inpPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.inpPassword.Size = New System.Drawing.Size(123, 20)
-        Me.inpPassword.TabIndex = 7
-        '
-        'Form1
+        'HomeScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -150,7 +150,7 @@ Partial Class HomeScreen
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Form1"
+        Me.Name = "HomeScreen"
         Me.Text = " "
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

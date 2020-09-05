@@ -2,6 +2,14 @@
 
 Public Class HomeScreen
 
+    'reset inputan form
+    Public Sub resetLogin()
+
+        inpUsername.Text = ""
+        inpPassword.Text = ""
+
+    End Sub
+
     'proses login
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
@@ -12,11 +20,12 @@ Public Class HomeScreen
         command.Parameters.Add("@password", OleDbType.Char).Value = inpPassword.Text
 
         dataReader = command.ExecuteReader
-        
+
         'jika username dan password tersedia
         If dataReader.HasRows Then
             MsgBox("Berhasil")
             Me.Hide()
+            Call resetLogin()
             Karyawan.ShowDialog()
         Else
             MsgBox("Opps username atau password salah")

@@ -6,6 +6,7 @@ Module configDB
     Public dataAdapter As OleDbDataAdapter
     Public command As OleDbCommand
     Public dataReader As OleDbDataReader
+    Public dataSet As DataSet
 
 
     Public Sub connection()

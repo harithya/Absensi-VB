@@ -31,11 +31,26 @@ Partial Class Karyawan
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dataGrid = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btn = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.inpNama = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.inpLaki = New System.Windows.Forms.RadioButton()
+        Me.inpPerempuan = New System.Windows.Forms.RadioButton()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.inpKategori = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.inpNip = New System.Windows.Forms.TextBox()
+        Me.inpNohp = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -43,7 +58,7 @@ Partial Class Karyawan
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KaryawanToolStripMenuItem, Me.LaporanToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(872, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(937, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -67,7 +82,7 @@ Partial Class Karyawan
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(16, 146)
+        Me.Button1.Location = New System.Drawing.Point(22, 265)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
@@ -98,7 +113,7 @@ Partial Class Karyawan
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(650, 151)
+        Me.Label3.Location = New System.Drawing.Point(715, 153)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(47, 13)
         Me.Label3.TabIndex = 4
@@ -106,48 +121,187 @@ Partial Class Karyawan
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(715, 148)
+        Me.TextBox1.Location = New System.Drawing.Point(780, 150)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(145, 20)
         Me.TextBox1.TabIndex = 5
         '
-        'DataGridView1
+        'dataGrid
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 195)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(844, 150)
-        Me.DataGridView1.TabIndex = 6
+        Me.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataGrid.Location = New System.Drawing.Point(396, 186)
+        Me.dataGrid.Name = "dataGrid"
+        Me.dataGrid.Size = New System.Drawing.Size(529, 303)
+        Me.dataGrid.TabIndex = 6
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(16, 43)
+        Me.Panel1.Location = New System.Drawing.Point(12, 43)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(843, 78)
+        Me.Panel1.Size = New System.Drawing.Size(913, 78)
         Me.Panel1.TabIndex = 7
+        '
+        'btn
+        '
+        Me.btn.Location = New System.Drawing.Point(148, 265)
+        Me.btn.Name = "btn"
+        Me.btn.Size = New System.Drawing.Size(75, 23)
+        Me.btn.TabIndex = 8
+        Me.btn.Text = "Update"
+        Me.btn.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(261, 265)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 9
+        Me.Button2.Text = "Delete"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'inpNama
+        '
+        Me.inpNama.Location = New System.Drawing.Point(110, 72)
+        Me.inpNama.Name = "inpNama"
+        Me.inpNama.Size = New System.Drawing.Size(226, 20)
+        Me.inpNama.TabIndex = 13
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(19, 75)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(35, 13)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "Nama"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(19, 122)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(71, 13)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "Jenis Kelamin"
+        '
+        'inpLaki
+        '
+        Me.inpLaki.AutoSize = True
+        Me.inpLaki.Location = New System.Drawing.Point(109, 120)
+        Me.inpLaki.Name = "inpLaki"
+        Me.inpLaki.Size = New System.Drawing.Size(68, 17)
+        Me.inpLaki.TabIndex = 15
+        Me.inpLaki.TabStop = True
+        Me.inpLaki.Text = "Laki Laki"
+        Me.inpLaki.UseVisualStyleBackColor = True
+        '
+        'inpPerempuan
+        '
+        Me.inpPerempuan.AutoSize = True
+        Me.inpPerempuan.Location = New System.Drawing.Point(217, 120)
+        Me.inpPerempuan.Name = "inpPerempuan"
+        Me.inpPerempuan.Size = New System.Drawing.Size(79, 17)
+        Me.inpPerempuan.TabIndex = 16
+        Me.inpPerempuan.TabStop = True
+        Me.inpPerempuan.Text = "Perempuan"
+        Me.inpPerempuan.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(19, 166)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(46, 13)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "Kategori"
+        '
+        'inpKategori
+        '
+        Me.inpKategori.FormattingEnabled = True
+        Me.inpKategori.Location = New System.Drawing.Point(110, 163)
+        Me.inpKategori.Name = "inpKategori"
+        Me.inpKategori.Size = New System.Drawing.Size(226, 21)
+        Me.inpKategori.TabIndex = 18
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(19, 32)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(25, 13)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "NIP"
+        '
+        'inpNip
+        '
+        Me.inpNip.Location = New System.Drawing.Point(110, 29)
+        Me.inpNip.Name = "inpNip"
+        Me.inpNip.Size = New System.Drawing.Size(226, 20)
+        Me.inpNip.TabIndex = 11
+        '
+        'inpNohp
+        '
+        Me.inpNohp.Location = New System.Drawing.Point(110, 207)
+        Me.inpNohp.Name = "inpNohp"
+        Me.inpNohp.Size = New System.Drawing.Size(226, 20)
+        Me.inpNohp.TabIndex = 20
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(19, 210)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(39, 13)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "No HP"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.inpNohp)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.btn)
+        Me.GroupBox1.Controls.Add(Me.inpKategori)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.inpPerempuan)
+        Me.GroupBox1.Controls.Add(Me.inpLaki)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.inpNama)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.inpNip)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 176)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(365, 313)
+        Me.GroupBox1.TabIndex = 21
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Form Karyawan"
         '
         'Karyawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(872, 381)
+        Me.ClientSize = New System.Drawing.Size(937, 532)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dataGrid)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Karyawan"
         Me.Text = "Karyawan"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -161,6 +315,20 @@ Partial Class Karyawan
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dataGrid As System.Windows.Forms.DataGridView
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents btn As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents inpNama As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents inpLaki As System.Windows.Forms.RadioButton
+    Friend WithEvents inpPerempuan As System.Windows.Forms.RadioButton
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents inpKategori As System.Windows.Forms.ComboBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents inpNip As System.Windows.Forms.TextBox
+    Friend WithEvents inpNohp As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class
