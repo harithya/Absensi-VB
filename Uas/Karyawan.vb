@@ -41,15 +41,6 @@ Public Class Karyawan
     End Sub
 
 
-    'jika di klik logout
-    Private Sub LogoutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LogoutToolStripMenuItem.Click
-
-        Me.Close()
-        Call HomeScreen.resetLogin()
-        HomeScreen.Show()
-    End Sub
-
-
     'jika button tambah di klik
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
@@ -89,5 +80,15 @@ Public Class Karyawan
 
 
     End Sub
+
+    'jika button keluar di klik
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+
+        Me.Close()
+        Call HomeScreen.resetLogin()
+        HomeScreen.Show()
+
+    End Sub
+
 
 End Class

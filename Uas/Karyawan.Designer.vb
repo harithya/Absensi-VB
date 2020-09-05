@@ -22,10 +22,7 @@ Partial Class Karyawan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.KaryawanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Karyawan))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -47,38 +44,22 @@ Partial Class Karyawan
         Me.inpNohp = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.MenuStrip1.SuspendLayout()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.KaryawanTab = New System.Windows.Forms.TabPage()
+        Me.LaporanTab = New System.Windows.Forms.TabPage()
+        Me.logoutTab = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.KaryawanTab.SuspendLayout()
+        Me.logoutTab.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KaryawanToolStripMenuItem, Me.LaporanToolStripMenuItem, Me.LogoutToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(937, 24)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'KaryawanToolStripMenuItem
-        '
-        Me.KaryawanToolStripMenuItem.Name = "KaryawanToolStripMenuItem"
-        Me.KaryawanToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
-        Me.KaryawanToolStripMenuItem.Text = "Karyawan"
-        '
-        'LaporanToolStripMenuItem
-        '
-        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
-        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.LaporanToolStripMenuItem.Text = "Laporan"
-        '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.LogoutToolStripMenuItem.Text = "logout"
         '
         'Button1
         '
@@ -129,9 +110,9 @@ Partial Class Karyawan
         'dataGrid
         '
         Me.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataGrid.Location = New System.Drawing.Point(396, 186)
+        Me.dataGrid.Location = New System.Drawing.Point(392, 120)
         Me.dataGrid.Name = "dataGrid"
-        Me.dataGrid.Size = New System.Drawing.Size(529, 303)
+        Me.dataGrid.Size = New System.Drawing.Size(529, 313)
         Me.dataGrid.TabIndex = 6
         '
         'Panel1
@@ -139,9 +120,9 @@ Partial Class Karyawan
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(12, 43)
+        Me.Panel1.Location = New System.Drawing.Point(7, 13)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(913, 78)
+        Me.Panel1.Size = New System.Drawing.Size(914, 78)
         Me.Panel1.TabIndex = 7
         '
         'btn
@@ -274,42 +255,123 @@ Partial Class Karyawan
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.inpNip)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Location = New System.Drawing.Point(11, 176)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 120)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(365, 313)
         Me.GroupBox1.TabIndex = 21
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Form Karyawan"
         '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.KaryawanTab)
+        Me.TabControl1.Controls.Add(Me.LaporanTab)
+        Me.TabControl1.Controls.Add(Me.logoutTab)
+        Me.TabControl1.Location = New System.Drawing.Point(0, -2)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(939, 483)
+        Me.TabControl1.TabIndex = 22
+        '
+        'KaryawanTab
+        '
+        Me.KaryawanTab.Controls.Add(Me.Panel1)
+        Me.KaryawanTab.Controls.Add(Me.dataGrid)
+        Me.KaryawanTab.Controls.Add(Me.GroupBox1)
+        Me.KaryawanTab.Location = New System.Drawing.Point(4, 22)
+        Me.KaryawanTab.Name = "KaryawanTab"
+        Me.KaryawanTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.KaryawanTab.Size = New System.Drawing.Size(931, 457)
+        Me.KaryawanTab.TabIndex = 0
+        Me.KaryawanTab.Text = "Karyawan"
+        Me.KaryawanTab.UseVisualStyleBackColor = True
+        '
+        'LaporanTab
+        '
+        Me.LaporanTab.Location = New System.Drawing.Point(4, 22)
+        Me.LaporanTab.Name = "LaporanTab"
+        Me.LaporanTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.LaporanTab.Size = New System.Drawing.Size(931, 457)
+        Me.LaporanTab.TabIndex = 1
+        Me.LaporanTab.Text = "Laporan"
+        Me.LaporanTab.UseVisualStyleBackColor = True
+        '
+        'logoutTab
+        '
+        Me.logoutTab.Controls.Add(Me.Button3)
+        Me.logoutTab.Controls.Add(Me.Label10)
+        Me.logoutTab.Controls.Add(Me.Label9)
+        Me.logoutTab.Controls.Add(Me.PictureBox1)
+        Me.logoutTab.Location = New System.Drawing.Point(4, 22)
+        Me.logoutTab.Name = "logoutTab"
+        Me.logoutTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.logoutTab.Size = New System.Drawing.Size(931, 457)
+        Me.logoutTab.TabIndex = 2
+        Me.logoutTab.Text = "Logout"
+        Me.logoutTab.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(451, 372)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "Keluar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(397, 339)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(192, 13)
+        Me.Label10.TabIndex = 2
+        Me.Label10.Text = "Stay di sini aja ya jangan ningalin aku :("
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(422, 308)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(140, 24)
+        Me.Label9.TabIndex = 1
+        Me.Label9.Text = "Apakah Yakin ?"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(355, 37)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(222, 256)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'Karyawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(937, 532)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.dataGrid)
+        Me.ClientSize = New System.Drawing.Size(937, 479)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Karyawan"
         Me.Text = "Karyawan"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         CType(Me.dataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.KaryawanTab.ResumeLayout(False)
+        Me.logoutTab.ResumeLayout(False)
+        Me.logoutTab.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents KaryawanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LogoutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -331,4 +393,12 @@ Partial Class Karyawan
     Friend WithEvents inpNohp As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents KaryawanTab As System.Windows.Forms.TabPage
+    Friend WithEvents LaporanTab As System.Windows.Forms.TabPage
+    Friend WithEvents logoutTab As System.Windows.Forms.TabPage
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class
