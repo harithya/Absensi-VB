@@ -16,10 +16,12 @@ Public Class HomeScreen
 
         'jika username dan password tersedia
         If dataReader.HasRows Then
+
             MsgBox("Berhasil")
             Karyawan.ShowDialog()
             Me.Close()
         Else
+
             MsgBox("Opps username atau password salah")
         End If
 
