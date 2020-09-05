@@ -12,16 +12,13 @@ Public Class HomeScreen
         command.Parameters.Add("@password", OleDbType.Char).Value = inpPassword.Text
 
         dataReader = command.ExecuteReader
-        dataReader.Read()
-
+        
         'jika username dan password tersedia
         If dataReader.HasRows Then
-
             MsgBox("Berhasil")
+            Me.Hide()
             Karyawan.ShowDialog()
-            Me.Close()
         Else
-
             MsgBox("Opps username atau password salah")
         End If
 
