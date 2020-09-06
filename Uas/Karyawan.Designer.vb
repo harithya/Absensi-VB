@@ -51,16 +51,32 @@ Partial Class Karyawan
         Me.Button5 = New System.Windows.Forms.Button()
         Me.inpSearch = New System.Windows.Forms.TextBox()
         Me.LaporanTab = New System.Windows.Forms.TabPage()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.logoutTab = New System.Windows.Forms.TabPage()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         CType(Me.dataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.KaryawanTab.SuspendLayout()
+        Me.LaporanTab.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.logoutTab.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -287,7 +303,7 @@ Partial Class Karyawan
         Me.TabControl1.Controls.Add(Me.KaryawanTab)
         Me.TabControl1.Controls.Add(Me.LaporanTab)
         Me.TabControl1.Controls.Add(Me.logoutTab)
-        Me.TabControl1.Location = New System.Drawing.Point(0, -2)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1000, 483)
@@ -336,6 +352,16 @@ Partial Class Karyawan
         '
         'LaporanTab
         '
+        Me.LaporanTab.Controls.Add(Me.Label17)
+        Me.LaporanTab.Controls.Add(Me.Label16)
+        Me.LaporanTab.Controls.Add(Me.PictureBox2)
+        Me.LaporanTab.Controls.Add(Me.Label15)
+        Me.LaporanTab.Controls.Add(Me.Button6)
+        Me.LaporanTab.Controls.Add(Me.Label14)
+        Me.LaporanTab.Controls.Add(Me.DateTimePicker2)
+        Me.LaporanTab.Controls.Add(Me.DateTimePicker1)
+        Me.LaporanTab.Controls.Add(Me.DataGridView1)
+        Me.LaporanTab.Controls.Add(Me.Panel2)
         Me.LaporanTab.Location = New System.Drawing.Point(4, 22)
         Me.LaporanTab.Name = "LaporanTab"
         Me.LaporanTab.Padding = New System.Windows.Forms.Padding(3)
@@ -343,6 +369,110 @@ Partial Class Karyawan
         Me.LaporanTab.TabIndex = 1
         Me.LaporanTab.Text = "Laporan"
         Me.LaporanTab.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(40, 391)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(332, 13)
+        Me.Label16.TabIndex = 16
+        Me.Label16.Text = "Pilih tanggal awal awal dan tanggal akhir untuk menampilkan laporan"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(57, 131)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(287, 222)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 15
+        Me.PictureBox2.TabStop = False
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(521, 131)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(43, 13)
+        Me.Label15.TabIndex = 14
+        Me.Label15.Text = "Periode"
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(907, 125)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 13
+        Me.Button6.Text = "Generate"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(739, 131)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(10, 13)
+        Me.Label14.TabIndex = 12
+        Me.Label14.Text = "-"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(755, 128)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(146, 20)
+        Me.DateTimePicker2.TabIndex = 11
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(587, 128)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(146, 20)
+        Me.DateTimePicker1.TabIndex = 10
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(429, 154)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(553, 277)
+        Me.DataGridView1.TabIndex = 9
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel2.Controls.Add(Me.Label12)
+        Me.Panel2.Controls.Add(Me.Label13)
+        Me.Panel2.Location = New System.Drawing.Point(8, 12)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(976, 78)
+        Me.Panel2.TabIndex = 8
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label12.Location = New System.Drawing.Point(13, 12)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(79, 24)
+        Me.Label12.TabIndex = 2
+        Me.Label12.Text = "Laporan"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label13.Location = New System.Drawing.Point(14, 46)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(162, 13)
+        Me.Label13.TabIndex = 3
+        Me.Label13.Text = "Daftar laporan absensi karyawan"
         '
         'logoutTab
         '
@@ -396,6 +526,16 @@ Partial Class Karyawan
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(117, 356)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(152, 24)
+        Me.Label17.TabIndex = 17
+        Me.Label17.Text = "Laporan Absensi"
+        '
         'Karyawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -414,6 +554,12 @@ Partial Class Karyawan
         Me.TabControl1.ResumeLayout(False)
         Me.KaryawanTab.ResumeLayout(False)
         Me.KaryawanTab.PerformLayout()
+        Me.LaporanTab.ResumeLayout(False)
+        Me.LaporanTab.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.logoutTab.ResumeLayout(False)
         Me.logoutTab.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -454,4 +600,16 @@ Partial Class Karyawan
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents inpSearch As System.Windows.Forms.TextBox
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
 End Class
