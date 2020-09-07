@@ -51,6 +51,7 @@ Partial Class Karyawan
         Me.Button5 = New System.Windows.Forms.Button()
         Me.inpSearch = New System.Windows.Forms.TextBox()
         Me.LaporanTab = New System.Windows.Forms.TabPage()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -67,7 +68,6 @@ Partial Class Karyawan
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label17 = New System.Windows.Forms.Label()
         CType(Me.karyawanGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -370,6 +370,16 @@ Partial Class Karyawan
         Me.LaporanTab.Text = "Laporan"
         Me.LaporanTab.UseVisualStyleBackColor = True
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(117, 356)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(152, 24)
+        Me.Label17.TabIndex = 17
+        Me.Label17.Text = "Laporan Absensi"
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
@@ -525,16 +535,6 @@ Partial Class Karyawan
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(117, 356)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(152, 24)
-        Me.Label17.TabIndex = 17
-        Me.Label17.Text = "Laporan Absensi"
         '
         'Karyawan
         '

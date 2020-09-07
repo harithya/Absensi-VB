@@ -241,5 +241,4 @@ Public Class Karyawan
 
     End Sub
 
-
 End Class
