@@ -230,7 +230,7 @@ Public Class Karyawan
 
         Call connection()
 
-        dataAdapter = New OleDbDataAdapter("SELECT karyawan.nip,karyawan.nama,karyawan.kategori,COUNT(*) AS total_absen  FROM absensi LEFT JOIN karyawan ON absensi.nip = karyawan.nip GROUP BY karyawan.nip,karyawan.nama,karyawan.kategori  ", connect)
+        dataAdapter = New OleDbDataAdapter("SELECT karyawan.nip,karyawan.nama,karyawan.kategori,COUNT(*) AS total_absen  FROM absensi LEFT JOIN karyawan ON absensi.nip = karyawan.nip WHERE FORMAT(absensi.tanggal, 'dd/MM/yyyy') BETWEEN  '" + inpTanggalAwal.Text + "' AND '" + inpTanggalAkhir.Text + "' GROUP BY karyawan.nip,karyawan.nama,karyawan.kategori  ", connect)
         dataSet = New DataSet
         dataAdapter.Fill(dataSet, "absensi")
         laporanGrid.DataSource = dataSet.Tables("absensi")

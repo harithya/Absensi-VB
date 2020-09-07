@@ -428,6 +428,7 @@ Partial Class Karyawan
         '
         'inpTanggalAkhir
         '
+        Me.inpTanggalAkhir.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.inpTanggalAkhir.Location = New System.Drawing.Point(755, 128)
         Me.inpTanggalAkhir.Name = "inpTanggalAkhir"
         Me.inpTanggalAkhir.Size = New System.Drawing.Size(146, 20)
@@ -435,6 +436,7 @@ Partial Class Karyawan
         '
         'inpTanggalAwal
         '
+        Me.inpTanggalAwal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.inpTanggalAwal.Location = New System.Drawing.Point(587, 128)
         Me.inpTanggalAwal.Name = "inpTanggalAwal"
         Me.inpTanggalAwal.Size = New System.Drawing.Size(146, 20)
