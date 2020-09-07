@@ -28,7 +28,7 @@ Partial Class Karyawan
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.dataGrid = New System.Windows.Forms.DataGridView()
+        Me.karyawanGrid = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btn = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -56,9 +56,9 @@ Partial Class Karyawan
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.inpTanggalAkhir = New System.Windows.Forms.DateTimePicker()
+        Me.inpTanggalAwal = New System.Windows.Forms.DateTimePicker()
+        Me.laporanGrid = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -68,14 +68,14 @@ Partial Class Karyawan
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        CType(Me.dataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.karyawanGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.KaryawanTab.SuspendLayout()
         Me.LaporanTab.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.laporanGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.logoutTab.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -127,18 +127,18 @@ Partial Class Karyawan
         Me.TextBox1.Size = New System.Drawing.Size(145, 20)
         Me.TextBox1.TabIndex = 5
         '
-        'dataGrid
+        'karyawanGrid
         '
-        Me.dataGrid.AllowUserToAddRows = False
-        Me.dataGrid.AllowUserToDeleteRows = False
-        Me.dataGrid.AllowUserToOrderColumns = True
-        Me.dataGrid.AllowUserToResizeColumns = False
-        Me.dataGrid.AllowUserToResizeRows = False
-        Me.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataGrid.Location = New System.Drawing.Point(430, 156)
-        Me.dataGrid.Name = "dataGrid"
-        Me.dataGrid.Size = New System.Drawing.Size(553, 277)
-        Me.dataGrid.TabIndex = 6
+        Me.karyawanGrid.AllowUserToAddRows = False
+        Me.karyawanGrid.AllowUserToDeleteRows = False
+        Me.karyawanGrid.AllowUserToOrderColumns = True
+        Me.karyawanGrid.AllowUserToResizeColumns = False
+        Me.karyawanGrid.AllowUserToResizeRows = False
+        Me.karyawanGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.karyawanGrid.Location = New System.Drawing.Point(430, 156)
+        Me.karyawanGrid.Name = "karyawanGrid"
+        Me.karyawanGrid.Size = New System.Drawing.Size(553, 277)
+        Me.karyawanGrid.TabIndex = 6
         '
         'Panel1
         '
@@ -315,7 +315,7 @@ Partial Class Karyawan
         Me.KaryawanTab.Controls.Add(Me.Button5)
         Me.KaryawanTab.Controls.Add(Me.inpSearch)
         Me.KaryawanTab.Controls.Add(Me.Panel1)
-        Me.KaryawanTab.Controls.Add(Me.dataGrid)
+        Me.KaryawanTab.Controls.Add(Me.karyawanGrid)
         Me.KaryawanTab.Controls.Add(Me.GroupBox1)
         Me.KaryawanTab.Location = New System.Drawing.Point(4, 22)
         Me.KaryawanTab.Name = "KaryawanTab"
@@ -358,9 +358,9 @@ Partial Class Karyawan
         Me.LaporanTab.Controls.Add(Me.Label15)
         Me.LaporanTab.Controls.Add(Me.Button6)
         Me.LaporanTab.Controls.Add(Me.Label14)
-        Me.LaporanTab.Controls.Add(Me.DateTimePicker2)
-        Me.LaporanTab.Controls.Add(Me.DateTimePicker1)
-        Me.LaporanTab.Controls.Add(Me.DataGridView1)
+        Me.LaporanTab.Controls.Add(Me.inpTanggalAkhir)
+        Me.LaporanTab.Controls.Add(Me.inpTanggalAwal)
+        Me.LaporanTab.Controls.Add(Me.laporanGrid)
         Me.LaporanTab.Controls.Add(Me.Panel2)
         Me.LaporanTab.Location = New System.Drawing.Point(4, 22)
         Me.LaporanTab.Name = "LaporanTab"
@@ -416,32 +416,32 @@ Partial Class Karyawan
         Me.Label14.TabIndex = 12
         Me.Label14.Text = "-"
         '
-        'DateTimePicker2
+        'inpTanggalAkhir
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(755, 128)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(146, 20)
-        Me.DateTimePicker2.TabIndex = 11
+        Me.inpTanggalAkhir.Location = New System.Drawing.Point(755, 128)
+        Me.inpTanggalAkhir.Name = "inpTanggalAkhir"
+        Me.inpTanggalAkhir.Size = New System.Drawing.Size(146, 20)
+        Me.inpTanggalAkhir.TabIndex = 11
         '
-        'DateTimePicker1
+        'inpTanggalAwal
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(587, 128)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(146, 20)
-        Me.DateTimePicker1.TabIndex = 10
+        Me.inpTanggalAwal.Location = New System.Drawing.Point(587, 128)
+        Me.inpTanggalAwal.Name = "inpTanggalAwal"
+        Me.inpTanggalAwal.Size = New System.Drawing.Size(146, 20)
+        Me.inpTanggalAwal.TabIndex = 10
         '
-        'DataGridView1
+        'laporanGrid
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToOrderColumns = True
-        Me.DataGridView1.AllowUserToResizeColumns = False
-        Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(429, 154)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(553, 277)
-        Me.DataGridView1.TabIndex = 9
+        Me.laporanGrid.AllowUserToAddRows = False
+        Me.laporanGrid.AllowUserToDeleteRows = False
+        Me.laporanGrid.AllowUserToOrderColumns = True
+        Me.laporanGrid.AllowUserToResizeColumns = False
+        Me.laporanGrid.AllowUserToResizeRows = False
+        Me.laporanGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.laporanGrid.Location = New System.Drawing.Point(429, 154)
+        Me.laporanGrid.Name = "laporanGrid"
+        Me.laporanGrid.Size = New System.Drawing.Size(553, 277)
+        Me.laporanGrid.TabIndex = 9
         '
         'Panel2
         '
@@ -546,7 +546,7 @@ Partial Class Karyawan
         Me.Controls.Add(Me.Label3)
         Me.Name = "Karyawan"
         Me.Text = "Karyawan"
-        CType(Me.dataGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.karyawanGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -557,7 +557,7 @@ Partial Class Karyawan
         Me.LaporanTab.ResumeLayout(False)
         Me.LaporanTab.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.laporanGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.logoutTab.ResumeLayout(False)
@@ -572,7 +572,7 @@ Partial Class Karyawan
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents dataGrid As System.Windows.Forms.DataGridView
+    Friend WithEvents karyawanGrid As System.Windows.Forms.DataGridView
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents btn As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
@@ -600,15 +600,15 @@ Partial Class Karyawan
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents inpSearch As System.Windows.Forms.TextBox
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents laporanGrid As System.Windows.Forms.DataGridView
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents inpTanggalAkhir As System.Windows.Forms.DateTimePicker
+    Friend WithEvents inpTanggalAwal As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Label17 As System.Windows.Forms.Label

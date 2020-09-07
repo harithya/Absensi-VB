@@ -14,8 +14,8 @@ Public Class Karyawan
 
         dataSet = New DataSet
         dataAdapter.Fill(dataSet, "karyawan")
-        dataGrid.DataSource = dataSet.Tables("karyawan")
-        dataGrid.Columns(4).Width = 120
+        karyawanGrid.DataSource = dataSet.Tables("karyawan")
+        karyawanGrid.Columns(4).Width = 120
 
     End Sub
 
@@ -111,12 +111,12 @@ Public Class Karyawan
 
 
     'Jika table cell di klik
-    Private Sub dataGrid_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dataGrid.CellClick
+    Private Sub dataGrid_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles karyawanGrid.CellClick
 
         Dim nip As Double
         Call connection()
 
-        nip = dataGrid.Rows(e.RowIndex).Cells(0).Value
+        nip = karyawanGrid.Rows(e.RowIndex).Cells(0).Value
 
         command = New OleDbCommand("SELECT * FROM karyawan WHERE nip=@nip ", connect)
         command.Parameters.AddWithValue("@nip", nip)
@@ -225,5 +225,21 @@ Public Class Karyawan
     End Sub
 
 
-    
+    'tombol generate laporan
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+
+        Call connection()
+
+        dataAdapter = New OleDbDataAdapter("SELECT karyawan.nip,karyawan.nama,karyawan.kategori,COUNT(*) AS total_absen  FROM absensi LEFT JOIN karyawan ON absensi.nip = karyawan.nip GROUP BY karyawan.nip,karyawan.nama,karyawan.kategori  ", connect)
+        dataSet = New DataSet
+        dataAdapter.Fill(dataSet, "absensi")
+        laporanGrid.DataSource = dataSet.Tables("absensi")
+        'width column
+        laporanGrid.Columns(0).Width = 110
+        laporanGrid.Columns(1).Width = 150
+        laporanGrid.Columns(2).Width = 150
+
+    End Sub
+
+
 End Class

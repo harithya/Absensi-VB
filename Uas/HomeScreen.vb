@@ -38,7 +38,7 @@ Public Class HomeScreen
     'form pertama kali di load
     Private Sub HomeScreen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Dim batasMasuk1 As String = "07:00:00"
+        Dim batasMasuk1 As String = "06:00:00"
         Dim batasMasuk2 As String = "08:00:00"
         Dim batasKeluar As String = "16:00:00"
         Dim time As String
